@@ -1,7 +1,12 @@
-set "LabName=LAB"
+@echo off
+rem Check if the number of arguments is 1
+if "%~1"=="" (
+    echo "Usage: ./start.bat [LabName]"
+    exit /b 1
+)
 
-aws ec2 create-key-pair --key-name keypair --key-type rsa --key-format ppk --query "KeyMaterial" --output text > %USERPROFILE%\Downloads\keypair.ppk
+./keypair.bat c
 
-./cf.bat .\ec2.yaml %LabName% c
+./cloudformation.bat .\ec2.yaml %1 c
 
-./pc.bat %LabName%
+./putty_connect.bat %1

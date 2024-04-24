@@ -1,1 +1,0 @@
-aws ec2 get-key-pair --key-name YourKeyPairName --query 'KeyMaterial' --output text > YourKeyPairName.pem

@@ -8,7 +8,7 @@ set "StackName=%1"
 echo StackName: %StackName%
 
 rem Get id of EC2 instance
-for /f "delims=" %%A in ('aws cloudformation describe-stack-resources --stack-name %StackName% --query "StackResources[?ResourceType=='AWS::EC2::Instance'].PhysicalResourceId" --output text') do (
+for /f "delims=" %%A in ('aws cloudformation describe-stack-resources --stack-name %StackName% --query "StackResources[?ResourceType=='AWS::EC2::Instance' && ResourceStatus!='DELETE_COMPLETE'].PhysicalResourceId" --output text') do (
     set "InstanceId=%%A"
 )
 echo InstanceId: %InstanceId%
