@@ -15,6 +15,9 @@ class Window(QtWidgets.QMainWindow, uic.loadUiType("AWS.bat.ui")[0]):
     def run(self, args):
         subprocess.run(args, shell=True)
 
+    def popen(self, args):
+        subprocess.Popen(args, shell=True)
+
     def keypair(self, action):
         self.run(['keypair.bat', action])
 
@@ -22,7 +25,7 @@ class Window(QtWidgets.QMainWindow, uic.loadUiType("AWS.bat.ui")[0]):
         self.run(["cloudformation.bat", ".\ec2.yaml", self.leStackName.text(), action])
 
     def putty_connect(self):
-        self.run(['putty_connect.bat', self.leStackName.text()])
+        self.popen(['putty_connect.bat', self.leStackName.text()])
 
     def on_button_clicked(self, button):
 
