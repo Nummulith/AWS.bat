@@ -4,7 +4,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: t2.micro
-      ImageId: ami-0663b059c6536cac8
+      ImageId: ami-0f7204385566b32d0
       KeyName: keypair
       SecurityGroups:
         - Ref: SSHSecurityGroup
