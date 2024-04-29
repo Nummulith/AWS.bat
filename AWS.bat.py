@@ -28,10 +28,11 @@ class Window(QtWidgets.QMainWindow, uic.loadUiType("AWS.bat.ui")[0]):
         self.popen(['putty_connect.bat', self.leStackName.text()])
 
     def on_button_clicked(self, button):
-
         btn = button.objectName()
+
         if   btn == "pbStart":
-            self.keypair("c")
+            if self.cbKeyPairUse.isChecked():
+                self.keypair("c")
             self.cloudformation("c")
             self.putty_connect()
 
@@ -41,7 +42,8 @@ class Window(QtWidgets.QMainWindow, uic.loadUiType("AWS.bat.ui")[0]):
 
         elif btn == "pbStop":
             self.cloudformation("d")
-            self.keypair("d")
+            if self.cbKeyPairUse.isChecked():
+                self.keypair("d")
             
 
         elif btn == "pbKeyPairCreate":

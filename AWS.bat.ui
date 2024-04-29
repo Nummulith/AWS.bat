@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>233</width>
-    <height>312</height>
+    <width>581</width>
+    <height>195</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -24,7 +24,7 @@
     <rect>
      <x>10</x>
      <y>70</y>
-     <width>71</width>
+     <width>141</width>
      <height>31</height>
     </rect>
    </property>
@@ -47,20 +47,20 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>71</width>
+     <width>81</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>Stack Name</string>
+    <string>Stack name</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pbKeyPairCreate">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>70</y>
-     <width>121</width>
+     <x>10</x>
+     <y>120</y>
+     <width>81</width>
      <height>31</height>
     </rect>
    </property>
@@ -71,9 +71,9 @@
   <widget class="QPushButton" name="pbCloudFormationCreate">
    <property name="geometry">
     <rect>
-     <x>100</x>
+     <x>110</x>
      <y>120</y>
-     <width>121</width>
+     <width>81</width>
      <height>31</height>
     </rect>
    </property>
@@ -84,9 +84,9 @@
   <widget class="QPushButton" name="pbCloudFormationDelete">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>220</y>
-     <width>121</width>
+     <x>310</x>
+     <y>120</y>
+     <width>81</width>
      <height>31</height>
     </rect>
    </property>
@@ -97,9 +97,9 @@
   <widget class="QPushButton" name="pbConnect">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>170</y>
-     <width>121</width>
+     <x>210</x>
+     <y>120</y>
+     <width>81</width>
      <height>31</height>
     </rect>
    </property>
@@ -110,9 +110,9 @@
   <widget class="QPushButton" name="pbKeyPairDelete">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>270</y>
-     <width>121</width>
+     <x>410</x>
+     <y>120</y>
+     <width>81</width>
      <height>31</height>
     </rect>
    </property>
@@ -123,9 +123,9 @@
   <widget class="QPushButton" name="pbRestart">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>120</y>
-     <width>71</width>
+     <x>170</x>
+     <y>70</y>
+     <width>141</width>
      <height>31</height>
     </rect>
    </property>
@@ -136,14 +136,50 @@
   <widget class="QPushButton" name="pbStop">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>170</y>
-     <width>71</width>
+     <x>330</x>
+     <y>70</y>
+     <width>141</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
     <string>Stop</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>10</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Key pair name</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="leKeyPairName">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>10</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="cbKeyPairUse">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>10</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Use key pair</string>
    </property>
   </widget>
  </widget>
